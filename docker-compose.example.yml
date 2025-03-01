@@ -15,7 +15,7 @@ services:
       - DB_USER=root
       - DB_PASSWORD=---
       - DB_NAME= ---
-    command: sh -c "npm run build && npm start"
+    command: sh -c "npm run dev"
     depends_on:
       - mysql
 

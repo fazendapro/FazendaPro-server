@@ -2,12 +2,13 @@
   "name": "cowtech-server",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "server.ts",
+  "type": "module",
   "scripts": {
     "test": "jest",
     "build": "tsc",
     "start": "node dist/server.js",
-    "dev": "nodemon --exec ts-node server.ts"
+    "dev": "npx tsx server.ts"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
     "nodemon": "^3.1.9",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
+    "tsx": "^4.19.3",
     "typescript": "^5.7.3"
   },
   "jest": {
