@@ -13,17 +13,15 @@ export class AuthService {
     username: string,
     pass: string,
   ): Promise<{ access_token: string }> {
-    console.log('Tentando autenticar usuário:', username);
     const user = await this.usersService.findOne(username);
-    console.log('Usuário encontrado:', user);
 
     if (!user) {
-      console.log('Usuário não encontrado');
+      console.error('Usuário não encontrado');
       throw new UnauthorizedException();
     }
 
     if (user.password !== pass) {
-      console.log('Senha incorreta');
+      console.error('Senha incorreta');
       throw new UnauthorizedException();
     }
 
